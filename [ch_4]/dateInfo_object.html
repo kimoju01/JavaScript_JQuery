@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜 정보 객체</title>
+    <script>
+        var today = new Date();
+        var week = new Array('일', '월', '화', '수', '목', '금', '토'); // 요일을 이름명으로 나타내기
+        var y = today.getFullYear();
+        var m = today.getMonth() + 1;   // getMonth() + 1 해야 현재 달의 숫자랑 같다 (0 ~ 11으로 취급하기 때문)
+        var d = today.getDate();
+        var day = today.getDay();       // 0 ~ 6 (일 ~ 토) 숫자로 출력 됨
+
+        document.write("<h1>오늘 날짜 정보</h1>");
+        document.write(y, "년 ");
+        document.write(m, "월 ");
+        document.write(d, "일 ");
+        document.write(week[day], "요일<br>");
+
+        ///////////////////////////////////////////////////
+
+        var worldcup = new Date(2002, 4, 31);   // 월에서 +1 해야 진짜 날짜! (getMonth() 때문)
+        var cupMonth = worldcup.getMonth();
+        var cupDate = worldcup.getDate();
+        var cupDay = worldcup.getDay();
+        
+        document.write("<h1>월드컵 날짜 정보</h1>");
+        document.write("2002 월드컵 언제 : " + cupMonth + " 월 " + cupDate + " 일<br>");
+        document.write("2002 월드컵 무슨 요일 : " + week[cupDay] + "요일");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

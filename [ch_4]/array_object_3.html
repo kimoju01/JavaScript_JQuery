@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 객체</title>
+    <script>
+        var arr_1 = ["사당", "교대", "방배", "강남"];
+        var arr_2 = ["신사", "압구정", "옥수"];
+
+        arr_1.splice(2, 1, "서초", "역삼"); // 2번 인덱스에서 1개 요소(방배) 제거 후 서초 역삼 추가.
+        document.write(arr_1, "<br>");  // 사당,교대,서초,역삼,강남 
+
+        var data1 = arr_2.pop();     
+        // pop : 배열의 맨 끝 값을 제거한다. data1=옥수, arr_2=[신사,압구정]
+        var data2 = arr_2.shift();  
+        // shift : 배열의 맨 앞 값을 제거한다. data2=신사, arr_2=[압구정]
+
+        arr_2.push(data2);          
+        // push : 배열의 맨 끝에 아이템을 추가한다. arr_2=[압구정,신사] 
+        document.write(arr_2, "<br>");
+
+        arr_2.unshift(data1);       
+        // unshift : 배열의 맨 앞에 아이템을 추가한다. arr_2=[옥수,압구정,신사]
+        document.write(arr_2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

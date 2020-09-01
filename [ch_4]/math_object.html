@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수학 객체</title>
+    <script>
+        var num = 2.1234;
+
+        var maxNum = Math.max(10, 5, 8, 30),
+            minNum = Math.min(10, 5, 8, 30),
+            roundNum = Math.round(num), // 소숫값에 따라 반올림 함.
+            floorNum = Math.floor(num), // 소숫값이 존재할 때 소숫값을 버림.
+            ceilNum = Math.ceil(num);   // 소숫값이 존재할 때 소숫값을 올림.
+            rndNum = Math.random();     // 기본은 0.~~ 이런식으로 랜덤값 나와서 Math.ceil(Math.random()*3) 하면 1,2,3 나온다.
+            rnddNum = Math.ceil(Math.random() * 10);
+            piNum = Math.PI;
+
+            document.write(maxNum, "<br>");
+            document.write(minNum, "<br>");
+            document.write(roundNum, "<br>");
+            document.write(floorNum, "<br>");
+            document.write(ceilNum, "<br>");
+            document.write(rndNum, "<br>");
+            document.write(rnddNum, "<br>");
+            document.write(piNum, "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
