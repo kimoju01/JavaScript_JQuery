@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map & Area</title>
+    <style>
+        * {margin:0; padding:0;}
+    </style>
+</head>
+<body>
+    <p>
+        <img src="images/brown_halloween.jpg" usemap="#pumpkin" alt="intro">
+        <!-- img의 usemap과 map의 name은 값이 같아야한다.-->
+        <map name="pumpkin" id="pumpkin">
+            <area shape="rect" coords="299,317,412,399" href="https://store.linefriends.com/" alt="intro"
+            onclick="window.close()">
+            <!-- onclick 속성 삭제하면 href 좌표로 이동한다. -->
+        </map>
+    </p>
+</body>
+</html>
