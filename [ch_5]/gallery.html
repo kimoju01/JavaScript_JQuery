@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터를 반환하고 강제 종료하는 return문</title>
+    <style>
+        * {margin:0; padding:0;}
+        #galleryZone {text-align: center;}
+        /* #galleryZone input[type="image"] {margin:0 8px;} */
+        img {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+    <script>
+        var num = 1;
+        function gallery(direct) {
+            if(direct) {    //if(0)은 if(false)와 같은 의미.
+                if(num == 8) return;    // false라면 이 구절은 실행되지 X
+                                        // num=8 되면 종료 (더이상 다음버튼 안 됨)
+                num++;
+            } else {
+                if(num == 1) return;    // num=1 되면 종료 (더이상 이전버튼 안 됨)
+                num--;
+            }
+
+            var imgTag = document.getElementById("photo");
+            imgTag.setAttribute("src", "images/pic_" + num + ".jpg");
+            // setAttribute("속성명", "새값"); : 선택한 태그의 지정한 속성을 새 값으로 바꿈
+        }
+    </script>
+</head>
+<body>
+    <div id="galleryZone">
+        <p>
+            <img src="images/pic_1.jpg" id="photo" alt="">
+        </p>
+        <p>
+            <button onclick="gallery(0)">이전</button>  <!--gallary 함수 호출-->
+            <button onclick="gallery(1)">다음</button>
+            <!--gallery(0)은 gallery(false)와 같고, gallery(1)은 gallery(ture)와 같다.
+                즉, 0이 들어간다면 if 구절은 실행 안 되고 else 구절만 실행된다. => 그래서 num--; 되면서 이전 버튼이 작동하는것
+                그리고 1이 들어간다면 if구절이 실행되고 else 구절은 실행 안 된다. => 그래서 num++; 하며 다음 버튼 동작한다.
+                -->
+        </p>
+    </div>
+</body>
+</html>
