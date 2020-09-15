@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전역과 지역을 나누는 이유</title>
+    <script>
+        var num = 100;
+        function menu() {
+            num += 100;
+            alert(num);
+        }
+
+        function menu() {
+            alert(num);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
